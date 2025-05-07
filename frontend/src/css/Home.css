@@ -1,0 +1,315 @@
+/* Home component styling */
+.homecomponent {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Container for displaying note cards in a square grid layout */
+.note-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);   /* 5 columns for large screens */
+  gap: 20px;                               /* Space between cards */
+  padding: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: auto;
+  grid-template-areas: "card card card card card";
+}
+
+/* Advanced Responsive Layout */
+@media (max-width: 1200px) {
+  .note-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for medium screens */
+  }
+}
+
+@media (max-width: 1024px) {
+  .note-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .note-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet-sized screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .note-container {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+}
+
+/* Individual note card styling */
+.note-card {
+  width: 100%;
+  max-width: 220px;
+  height: 220px;                        /* Square shape (height = width) */
+  background-color: #061521;            /* Dark blue background */
+  color: white;
+  border-radius: 8px;                   /* Rounded corners */
+  border: 2px solid #1b0f3e;        /* Orange border color */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Card shadow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.note-card:hover {
+  transform: scale(1.05);                /* Slightly enlarge card on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Increase shadow on hover */
+}
+
+/* Note title styling */
+.note-title {
+  font-size: 1.2rem;                     /* Larger font size for title */
+  font-weight: bold;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  color: #f8f8f8;                        /* Orange color for title */
+}
+
+/* Note description styling */
+.note-description {
+  font-size: 0.85rem;
+  max-height: 80px;
+  overflow-y: auto;                       /* Scroll if content exceeds max height */
+  text-align: center;
+  margin-bottom: 10px;
+  color: #d1d1d1;                        /* Lighter color for description */
+  font-style: italic;                     /* Italicize description text */
+}
+
+/* Action buttons for edit and delete */
+.note-actions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+}
+
+.note-edit,
+.note-delete {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.note-edit:hover,
+.note-delete:hover {
+  color: #f0a500;  /* Highlight color on hover */
+}
+
+/* Mobile responsive styling for note cards */
+@media (max-width: 640px) {
+  .note-list {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+  }
+
+  .note-card {
+    width: 90%;                             /* Make cards take full width on small screens */
+  }
+}
+
+/* Add custom layout for note container using grid-template-areas */
+.note-container {
+  grid-template-areas: "card card card card card"; /* Define layout for 5 columns */
+}
+
+/* When screen size is smaller */
+@media (max-width: 1200px) {
+  .note-container {
+    grid-template-areas: "card card card card";  /* For medium screen (4 columns) */
+  }
+}
+
+@media (max-width: 1024px) {
+  .note-container {
+    grid-template-areas: "card card card";  /* For smaller screen (3 columns) */
+  }
+}
+
+@media (max-width: 768px) {
+  .note-container {
+    grid-template-areas: "card card"; /* For tablet-sized screens (2 columns) */
+  }
+}
+
+@media (max-width: 480px) {
+  .note-container {
+    grid-template-areas: "card"; /* 1 column for mobile screens */
+  }
+}/* Modal container */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); /* Darker background for better focus */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease-in-out, backdrop-filter 0.3s ease;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #1f2a47;  /* Darker blue for a sleek look */
+  color: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease;
+  transform: scale(0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* Deep shadow for dramatic effect */
+  backdrop-filter: blur(10px); /* Add blur effect to the background */
+  opacity: 0;
+}
+
+/* Modal header (title) */
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-align: center;
+  color: #00bcd4; /* Bright cyan color for the title */
+  font-weight: 700;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Subtle text shadow for contrast */
+}
+
+/* Modal form */
+.modal-form input,
+.modal-form textarea {
+  width: 90%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #4f6b89; /* Lighter blue border */
+  background-color: #121a28; /* Dark background for inputs */
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Focus effect for input fields */
+.modal-form input:focus,
+.modal-form textarea:focus {
+  border-color: #00bcd4; /* Cyan border when focused */
+  background-color: #1b2735; /* Slightly lighter background */
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5); /* Glow effect */
+  outline: none;
+}
+
+/* Submit button styling */
+.modal-form button {
+  padding: 14px 24px;
+  background-color: #00597b; /* Teal background for button */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Button hover effect */
+.modal-form button:hover {
+  background-color: #007c91; /* Lighter teal on hover */
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Cancel button */
+.modal-content button.cancel-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #00bcd4; /* Cyan border for cancel button */
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+/* Cancel button hover effect */
+.modal-content button.cancel-btn:hover {
+  color: #00bcd4; /* Cyan text color */
+  background-color: rgba(0, 188, 212, 0.1); /* Subtle background color */
+  box-shadow: 0 2px 8px rgba(0, 188, 212, 0.3); /* Glow effect */
+}
+
+/* Show modal when it's open */
+.modal-overlay.show {
+  opacity: 1;
+  pointer-events: all;
+  backdrop-filter: blur(12px); /* Intense blur when open */
+}
+
+/* Animating modal on open */
+.modal-content.open {
+  transform: scale(1);
+  opacity: 1;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Style for the Add Note button */
+.add-note-button {
+  position: fixed;
+  bottom: 20px;        /* Distance from the bottom */
+  left: 20px;          /* Distance from the left */
+  width: 70px;         /* Larger button */
+  height: 70px;        /* Larger button */
+  font-size: 2.5rem;   /* Larger font */
+  background-color: #1f3a57; /* Darker background */
+  color: white;
+  border-radius: 50%;  /* Circular button */
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);  /* Larger shadow */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;       /* Make sure it stays on top */
+}
+
+/* Hover effect for the button */
+.add-note-button:hover {
+  background-color: #004369;  /* Darker shade of the button */
+  transform: scale(1.2);       /* Slightly enlarge the button */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); /* Larger shadow on hover */
+}
+
+/* Disabled state for the button */
+.add-note-button:disabled {
+  background-color: #444;  /* Dark grey background */
+  cursor: not-allowed;
+}

@@ -1,0 +1,135 @@
+/* body {
+    overflow: hidden;
+    margin: 0;
+} */
+
+.custom-class-signup {
+    position: absolute;
+    top: 110px;
+    left: 705px;
+    font-size: 35px;
+    font-family: sans-serif;
+}
+
+.custom-class-welcomeSignup {
+    position: absolute;
+    top: 35px;
+    font-size: 25px;
+    text-align: center;
+    width: 100%;
+    left:89px;
+    
+}
+
+.signupForm {
+    position: fixed;
+    top: 430px;
+    left: 770px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(27, 26, 26);
+    height: 450px;
+    width: 400px;
+    border-radius: 15px;
+    opacity: 0.97;
+    z-index: 2;
+    border: 2px solid #1E90FF;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+    padding: 20px;
+}
+
+.signupLabelName,
+.signupLabelEmail,
+.signupLabelPassword {
+    font-family: sans-serif;
+    color: #ffffff;
+    position: absolute;
+    left: 50px;
+}
+
+.signupLabelName {
+    top: 100px;
+}
+
+.signupLabelEmail {
+    top: 195px;
+}
+
+.signupLabelPassword {
+    top: 290px;
+}
+
+.signupInputName,
+.signupInputEmail,
+.signupInputPassword {
+    position: absolute;
+    width: 290px;
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #87CEFA;
+    background-color: #1b1a1a;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    left: 46px;
+}
+
+.signupInputName {
+    top: 130px;
+}
+
+.signupInputEmail {
+    top: 225px;
+}
+
+.signupInputPassword {
+    top: 320px;
+}
+.signupInputName:hover,
+.signupInputEmail:hover,
+.signupInputPassword:hover,
+.signupInputName:focus,
+.signupInputEmail:focus,
+.signupInputPassword:focus {
+    border-color: #0000FF;
+    box-shadow: 0 0 10px #0000FF;
+    transform: scale(1.02);
+}
+
+.custom-class-signupBox {
+    position: absolute;
+    top: 395px;
+    left: 140px;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.signupButtonBox {
+    position: relative;
+    bottom: 17px;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+.signupAlreadyAccount {
+    position: absolute;
+    top: 450px;
+    color: white;
+    left: 220px;
+}
+
+/* Link Hover Effect */
+.signupAlreadyAccount a {
+    color: #87CEFA;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.signupAlreadyAccount a:hover {
+    color: #0000FF;
+    text-decoration: underline;
+}

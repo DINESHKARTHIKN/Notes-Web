@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+  }
+  
+  /* For WebKit-based browsers */
+  ::-webkit-scrollbar {
+    width: 10px; /* Width of the entire scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000; /* Color of the track (the background) */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #000; /* Color of the scroll thumb */
+    border-radius: 10px; /* Roundness of the scroll thumb */
+    border: 2px solid #000; /* Creates padding around scroll thumb */
+  }
+  
+  
+.custom-class-signin{
+    position: absolute;
+    top:110px;
+    left:705px;
+    font-size:35px;
+    font-family: sans-serif;
+}
+
+.custom-class-Welcomeback{
+    position: absolute;
+    top:25px;
+    font-size:25px;
+}
+
+.signinForm {
+    position: fixed;
+    top: 400px;
+    left: 770px;
+    transform: translate(-50%, -50%);
+    background-color: rgb(27, 26, 26);
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    opacity: 0.97;
+    z-index: 2;
+    border: 2px solid #1E90FF;
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.7);
+    border-radius: 15px;
+    padding: 20px;
+
+}
+
+.Welcomeback {
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.signinlabelemail {
+    font-family: sans-serif;
+    position: absolute;
+    left: 50px;
+    top: 110px;
+    color: #ffffff;
+}
+
+.signininputemail {
+    position: absolute;
+    width: 290px;
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #87CEFA;
+    top: 125px;
+    background-color: #1b1a1a;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    left:46px;
+    top:140px;
+}
+
+/* Hover & Focus Effects */
+.signininputemail:hover,
+.signininputemail:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 10px  #0000FF;
+    transform: scale(1.02);
+}
+
+.signinpassbox {
+    position: absolute;
+    left: 35px;
+    top: 230px;
+    color: white;
+    
+}
+
+.signinlabelpassword {
+    font-family: sans-serif;
+    position: relative;
+    left: 12px;
+    bottom:20px;
+}
+
+.signininputpassword {
+    position: absolute;
+    left: 12px;
+    width: 290px;
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 2px solid #87CEFA;
+    background-color: #1b1a1a;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    top:10px;
+}
+
+/* Hover & Focus Effects */
+.signininputpassword:hover,
+.signininputpassword:focus {
+    border-color: #1E90FF;
+    box-shadow: 0 0 10px  #0000FF;
+    transform: scale(1.02);
+}
+
+.custom-class-signinbox {
+    position: absolute;
+    top: 280px;
+    left: 110px;
+    width: 150px;
+    height: 50px;
+}
+
+.signinbuttonbox {
+    position: relative;
+    bottom: 17px;
+    font-weight: bold;
+}
+
+.signindonthaveaccount {
+    position: absolute;
+    top: 390px;
+    color: white;
+    left: 220px;
+}
+
+/* Optional: Signup link hover effect */
+.signindonthaveaccount a {
+    color: #87CEFA;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.signindonthaveaccount a:hover {
+    color: #1E90FF;
+    text-decoration: underline;
+}

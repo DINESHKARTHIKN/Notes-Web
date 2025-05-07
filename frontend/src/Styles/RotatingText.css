@@ -1,0 +1,70 @@
+/* Main container */
+.rotating-text-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  background-color: #67e8f9; /* Cyan */
+  color: black;
+  padding: 5px 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  font-weight: bold;
+  font-size: 18px;
+  min-width: 100px;
+}
+
+/* Hidden screen reader text */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Text container */
+.rotating-text {
+  display: flex;
+  position: relative;
+}
+
+/* Words */
+.word {
+  display: flex;
+}
+
+/* Individual characters */
+.character {
+  position: relative;
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Space between words */
+.space {
+  width: 8px;
+}
+
+/* Exit animation */
+.character.exit {
+  opacity: 0;
+  transform: translateY(-120%);
+}
+
+/* Visible text animation */
+.character.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Increase font size of rotating text */
+.character {
+  font-size: 27px; /* Adjust size as needed */
+  font-weight: bold;
+  font-family: sans-serif;
+}

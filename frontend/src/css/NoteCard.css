@@ -1,0 +1,87 @@
+/* Container for displaying note cards in a grid layout */
+.note-list {
+    display: grid;                          /* Use CSS Grid */
+    grid-template-columns: repeat(5, 1fr);   /* 5 columns, equal width for each column */
+    gap: 20px;                               /* Space between cards */
+    padding: 16px;
+    justify-items: center;                   /* Center items in each grid cell */
+  }
+  
+  /* Individual note card styling */
+  .note-card {
+    width: 100%;                             /* Full width of the grid column */
+    max-width: 220px;                        /* Max width for card */
+    height: 320px;                           /* Card height */
+    background-color: #1c3d5a;               /* Dark blue background color */
+    color: white;
+    border-radius: 8px;                      /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);  /* Card shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;                      /* Allow for absolute positioning of elements */
+    overflow: hidden;                        /* Ensure content stays within the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  }
+  
+  .note-card:hover {
+    transform: scale(1.05);                  /* Slightly enlarge the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  /* Increase shadow on hover */
+  }
+  
+  /* Note title styling */
+  .note-title {
+    font-size: 1rem;                         /* Font size for title */
+    font-weight: bold;
+    margin-bottom: 10px;                     /* Margin below title */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;                 /* Hide overflow text with ellipsis */
+    text-align: center;                      /* Center title */
+  }
+  
+  /* Note description styling */
+  .note-description {
+    font-size: 0.85rem;                      /* Font size for description */
+    max-height: 120px;                       /* Max height for description */
+    overflow-y: auto;                        /* Scroll if content exceeds max height */
+    text-align: center;                      /* Center the text */
+    margin-bottom: 10px;                     /* Margin below description */
+  }
+  
+  /* Action buttons for edit and delete */
+  .note-actions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+  }
+  
+  .note-edit,
+  .note-delete {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .note-edit:hover,
+  .note-delete:hover {
+    color: #f0a500;  /* Highlight color on hover */
+  }
+  
+  /* Mobile responsive styling */
+  @media (max-width: 640px) {
+    .note-list {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+  
+    .note-card {
+      width: 90%;                             /* Make cards take full width on small screens */
+    }
+  }
+  

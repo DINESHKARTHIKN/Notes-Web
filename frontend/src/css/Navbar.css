@@ -1,0 +1,142 @@
+/* NAVBAR CONTAINER */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #1e1e2f, #2a2a40);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  padding: 0 40px;
+  height: 80px;
+  position: relative;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* BRAND TEXT */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.custom-class-Notes {
+  font-size: 24px;
+  color: #ffffff;
+  background: linear-gradient(90deg, #00ffe7, #4d7cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* ROTATING TEXT */
+.navbar-brand .rotating-text-wrapper {
+  background: rgba(255, 255, 255, 0.1);
+  color: #67e8f9;
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* SEARCH BAR */
+.navbar-search {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 2px solid #4d7cff;
+  background-color: #1c1c2b;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  width: 300px;
+}
+
+.navbar-search:hover,
+.navbar-search:focus {
+  border-color: #7ecfff;
+  box-shadow: 0 0 12px rgba(126, 207, 255, 0.6);
+  transform: translateX(-50%) scale(1.05);
+  outline: none;
+}
+
+/* LINKS */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-link1,
+.navbar-link2 {
+  color: #e0e0e0;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.navbar-link1:hover,
+.navbar-link2:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* SPLIT TEXT GREETING */
+.textk {
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+}/* Default and Advanced Signout Button */
+.navbar-signout {
+  background: linear-gradient(135deg, #1f3b73, #2b4876); /* Dark Blue gradient for default state */
+  color: white;
+  border: none;
+  padding: 12px 24px; /* Increased padding for a more prominent button */
+  border-radius: 30px; /* Rounded corners */
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Initial subtle shadow */
+}
+
+/* Hover Effect */
+.navbar-signout:hover {
+  background: linear-gradient(135deg, #ff2e00, #ff0057); /* Bright gradient on hover */
+  transform: scale(1.05); /* Slight scale up on hover */
+  box-shadow: 0 8px 20px rgba(255, 0, 87, 0.6); /* Enhanced shadow on hover */
+  text-shadow: 0 0 8px rgba(255, 0, 87, 0.8); /* Glowing text effect */
+  border: 1px solid #ff0057; /* Light border on hover */
+}
+
+/* Active State */
+.navbar-signout:active {
+  transform: scale(0.98); /* Slight shrink effect when clicked */
+  box-shadow: 0 4px 10px rgba(255, 0, 87, 0.3); /* Reduced shadow on click */
+}
+
+/* Optional: Icon added to the button */
+.navbar-signout i {
+  font-size: 20px; /* Icon size */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effect on icon */
+.navbar-signout:hover i {
+  transform: translateX(4px); /* Icon shift effect on hover */
+}
