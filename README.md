@@ -18,7 +18,7 @@ A simple full-stack Notes Application built with the **MERN stack** (MongoDB, Ex
 **Frontend:**
 - React
 - ReactBits (for UI design)
-- Axios
+- Css
 
 **Backend:**
 - Node.js
@@ -27,4 +27,19 @@ A simple full-stack Notes Application built with the **MERN stack** (MongoDB, Ex
 - JWT (Authentication)
 
 ---
+
+## 📸 Screenshots
+
+### 🔐 Login
+![Login](https://github.com/DINESHKARTHIKN/Notes-Web/blob/main/IMG/img1.png)
+
+### 🧾 Signup
+![Signup](https://github.com/DINESHKARTHIKN/Notes-Web/blob/main/IMG/img2.png)
+
+### 🏠 Home
+![Home](https://github.com/DINESHKARTHIKN/Notes-Web/blob/main/IMG/img3.png)
+
+### 📝 Modal
+![Modal](https://github.com/DINESHKARTHIKN/Notes-Web/blob/main/IMG/img4.png)
+
 
