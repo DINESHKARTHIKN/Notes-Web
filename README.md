@@ -42,4 +42,6 @@ A simple full-stack Notes Application built with the **MERN stack** (MongoDB, Ex
 ### 📝 Modal
 ![Modal](https://github.com/DINESHKARTHIKN/Notes-Web/blob/main/IMG/img4.png)
 
+---
+
 
